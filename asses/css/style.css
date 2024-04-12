@@ -46,3 +46,26 @@ body{
     font-weight: 500;
     padding: 0 48px 0 42px;
 }
+
+.search-wrapper input::placeholder{
+    color: white;
+    text-transform: capitalize;
+}
+.search-wrapper i{
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+}
+.search-wrapper button{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    color: white;
+    padding: 0 40px 0 5px;
+    cursor: pointer;
+}
