@@ -101,11 +101,11 @@ body{
 }
 
 .weather-details {
-    position: absolute;
+    position: relative;
     width: 100%;
     padding: 0 20px;
     display: flex;
-
+    margin-bottom: 10px;
 }
 
 .weather-details .humidity, .weather-details .wind{
@@ -134,4 +134,32 @@ body{
 .weather-details p{
     font-size: 15px;
     font-weight: 500;
+}
+
+.forecast .tittle-2{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 6px;
+    color: white;
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+.forcast-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card-item{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    
+}
+.card-item img{
+    width: 70px;
+    height: 70px;
 }
