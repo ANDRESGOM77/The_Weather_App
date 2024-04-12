@@ -12,6 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: black;
 }
 
 .container{
@@ -19,7 +20,9 @@ body{
     width: 700px;
     height: 1000px;
     border-radius: 15px;
-    background-color: grey;
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255 , 255, .2);
     padding: 20px;
     color: white;
 
@@ -95,4 +98,40 @@ body{
     font-size: 25px;
     font-weight: 500;
     text-transform: capitalize;
+}
+
+.weather-details {
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+
+}
+
+.weather-details .humidity, .weather-details .wind{
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+.weather-details .wind{
+    padding-left: 20px;
+    justify-content: flex-end;
+}
+.weather-details i{
+    font-size: 55px;
+    margin-right: 10px;
+}
+
+.weather-details span{
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 500;
+}
+.weather-details p{
+    font-size: 15px;
+    font-weight: 500;
 }
