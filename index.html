@@ -13,92 +13,57 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/2893c0e3d2.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <div class="container">
-        <div class="search-wrapper">
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="search" name="search" placeholder="search city..." autocomplete="off" class="search-field">
-            <button class="fa-solid fa-magnifying-glass"></button>
-        </div>
-
-        <div class="weather-container">
-            <div class="box">
-                <div class="info-weather">
-                    <div class="weather">
-                        <img src="/asses/images/clear.png" alt="sun">
-                        <p class="termperture">0&deg;<sup>c</sup></p>
-                        <p class="description">clear</p>
+    <header>
+        <h1>The weather App</h1>
+        <section>
+            <form id="city-search">
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="search" id="city" placeholder="search city..." autocomplete="off" >
+                    <button type="submit" class="fa-solid fa-magnifying-glass"></button>
+                </div> 
+            </form>
+        </section>
+    </header>
+    <main>
+        <section>
+            
+            <div id="weather-container">
+                <div class="box">
+                    <div class="info-weather">
+                        <div class="weather">
+                            <img id="current-img" src="asses/images/clear.png" alt="sun">
+                            <p id="termperture" class="termperture">0&deg;<sup>c</sup></p>
+                            <p id="description" class="description">clear</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="weather-details">
-            <div class="humidity">
-                <i class="fa-solid fa-water"></i>
-                <div class="text">
-                    <div class="info-humidity">
-                        <span>0%</span>
+    
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fa-solid fa-water"></i>
+                    <div class="text">
+                        <div class="info-humidity">
+                            <span>0%</span>
+                        </div>
+                        <p>Humidity</p>
                     </div>
-                    <p>Humidity</p>
                 </div>
-            </div>
-            <div class="wind">
-                <i class="fa-solid fa-wind"></i>
-                <div class="text">
-                    <div class="info-wind">
-                        <span> 0km/h</span>
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="text">
+                        <div class="info-wind">
+                            <span> 0km/h</span>
+                        </div>
+                        <p>Wind Speed</p>
                     </div>
-                    <p>Wind Speed</p>
                 </div>
             </div>
-        </div>
-
-        <div class="forecast" data-5-day-forecast>
-            <h2 class="title-2">5 Days Forecast</h2>
-        </div>
-            <div class="forecast-card">
-                <div class="card-item">
-
-                    <img src="asses/images/clouds.png" alt="clouds" class="weather-icon">
-                    
-                    <p class="label">12 Apr</p>
-                    <p class="label">Friday</p>
-                </div>
-                <div class="card-item">
-
-                    <img src="asses/images/clouds.png" alt="clouds" class="weather-icon">
-
-                    <p class="label">12 Apr</p>
-                    <p class="label">Friday</p>
-                </div>
-                <div class="card-item">
-
-                    <img src="asses/images/clouds.png" alt="clouds" class="weather-icon">
-
-                    <p class="label">12 Apr</p>
-                    <p class="label">Friday</p>
-                </div>
-                <div class="card-item">
-
-                    <img src="asses/images/clouds.png" alt="clouds" class="weather-icon">
-
-                    <p class="label">12 Apr</p>
-                    <p class="label">Friday</p>
-                </div>
-                <div class="card-item">
-
-                    <img src="asses/images/clouds.png" alt="clouds" class="weather-icon">
-
-                    <p class="label">12 Apr</p>
-                    <p class="label">Friday</p>
-                </div>
-            </div>
-    </div>
-
-
-    <script src="asses/js/script.js"></script>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="weather.js"></script>
 </body>
-
 </html>

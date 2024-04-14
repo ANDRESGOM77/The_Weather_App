@@ -18,14 +18,14 @@ body{
 .container{
     position: relative;
     width: 700px;
-    height: 1000px;
+    height: 100px;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, .1);
     backdrop-filter: blur(30px);
     border: 2px solid rgba(255, 255 , 255, .2);
     padding: 20px;
     color: white;
-
+    transition: height .5s ease-all;
 }
 .search-wrapper{
     position: relative;
@@ -76,6 +76,18 @@ body{
 .weather-container{
     text-align: center;
     margin: 40px 0;
+}
+
+.weather-container,
+.weather-details,
+.not-found{
+    visibility: hidden;
+}
+
+.weather-container.active,
+.weather-details.active,
+.not-found.active{
+    visibility: visible;
 }
 
 .weather img{
@@ -163,4 +175,20 @@ body{
 .card-item img{
     width: 70px;
     height: 70px;
+}
+.not-found{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 110px;
+}
+.not-found img{
+    width: 60%;
+}
+.not-found p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 15px;
 }
