@@ -1,41 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins",sans-seri;
+    font-family: "Poppins", sans-seri;
 }
-
-body{
+body {
+    
+}
+header h1{
     display: flex;
+    position: relative;
+    align-items:center ;
     justify-content: center;
+}
+#city-search{
+    position: relative;
+    display: flex;
     align-items: center;
-    min-height: 100vh;
-    background-color: black;
+    justify-content: start ;
+}
+#city{
+    position: absolute;
+    background: orange;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#city-search i {
+
+}
+#city-search button {
+
 }
 
-.container{
+
+/* .container {
     position: relative;
     width: 700px;
     height: 100px;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, .1);
     backdrop-filter: blur(30px);
-    border: 2px solid rgba(255, 255 , 255, .2);
+    border: 2px solid rgba(255, 255, 255, .2);
     padding: 20px;
     color: white;
     transition: height .5s ease-all;
 }
-.search-wrapper{
-    position: relative;
-    width: 100%;
-    height: 55px;
-    display: flex;
-    align-items: center;
-}
 
-.search-wrapper input{
+.search-wrapper input {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -50,51 +63,40 @@ body{
     text-transform: uppercase;
 }
 
-.search-wrapper input::placeholder{
+.search-wrapper input::placeholder {
     color: white;
     text-transform: capitalize;
 }
-.search-wrapper i{
+
+.search-wrapper i {
     position: absolute;
     left: 10px;
     font-size: 20px;
 }
-.search-wrapper button{
-    position: absolute;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 25px;
-    color: white;
-    padding: 0 40px 0 5px;
-    cursor: pointer;
-}
 
-.weather-container{
+
+.weather-container {
     text-align: center;
     margin: 40px 0;
 }
 
 .weather-container,
 .weather-details,
-.not-found{
+.not-found {
     visibility: hidden;
 }
 
 .weather-container.active,
 .weather-details.active,
-.not-found.active{
+.not-found.active {
     visibility: visible;
 }
 
-.weather img{
+.weather img {
     width: 50%;
 }
 
-.weather-container .termperture{
+.weather-container .termperture {
     position: relative;
     font-size: 64px;
     line-height: 1;
@@ -102,12 +104,13 @@ body{
     margin: 20px 0 6px -30px;
 }
 
-.weather-container .termperture span{
+.weather-container .termperture span {
     position: absolute;
     font-size: 24px;
     margin-left: 5px;
 }
-.weather-container .description{
+
+.weather-container .description {
     font-size: 25px;
     font-weight: 500;
     text-transform: capitalize;
@@ -121,35 +124,40 @@ body{
     margin-bottom: 10px;
 }
 
-.weather-details .humidity, .weather-details .wind{
+.weather-details .humidity,
+.weather-details .wind {
     display: flex;
     align-items: center;
     width: 40%;
 }
-.weather-details .humidity{
+
+.weather-details .humidity {
     padding-left: 20px;
     justify-content: flex-start;
 }
-.weather-details .wind{
+
+.weather-details .wind {
     padding-left: 20px;
     justify-content: flex-end;
 }
-.weather-details i{
+
+.weather-details i {
     font-size: 55px;
     margin-right: 10px;
 }
 
-.weather-details span{
+.weather-details span {
     display: inline-block;
     font-size: 25px;
     font-weight: 500;
 }
-.weather-details p{
+
+.weather-details p {
     font-size: 15px;
     font-weight: 500;
 }
 
-.forecast .tittle-2{
+.forecast .tittle-2 {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -159,24 +167,27 @@ body{
     text-transform: uppercase;
 }
 
-.forcast-card{
+.forcast-card {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
+
 }
-.card-item{
+
+.card-item {
     display: flex;
     flex-direction: column;
     width: 15%;
-    
+
 }
-.card-item img{
+
+.card-item img {
     width: 70px;
     height: 70px;
 }
-.not-found{
+
+.not-found {
     position: absolute;
     top: 0;
     left: 0;
@@ -184,11 +195,13 @@ body{
     text-align: center;
     margin-top: 110px;
 }
-.not-found img{
+
+.not-found img {
     width: 60%;
 }
-.not-found p{
+
+.not-found p {
     font-size: 22px;
     font-weight: 500;
     margin-top: 15px;
-}
+} */
