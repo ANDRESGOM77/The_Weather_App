@@ -47,6 +47,7 @@ body{
     color: white;
     font-weight: 500;
     padding: 0 48px 0 42px;
+    text-transform: uppercase;
 }
 
 .search-wrapper input::placeholder{
