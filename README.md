@@ -31,8 +31,8 @@ This page also supports the dark mode feature.
 ## Instalation
 
 ``bash
-git clone https://github.com/ANDRESGOM77/My-New-Blog
-git pull
+-git clone https://github.com/ANDRESGOM77/The_Weather_App
+-git pull
 
 ## Technologies Usage
 
@@ -51,6 +51,11 @@ git pull
 
 -OpenWeatherMap API: OpenWeatherMap
 -Icons: FontAwesome
+
+## App Display
+
+- link:
+
 
 ## Contributing
 
