@@ -3,7 +3,8 @@ const cityInput = document.getElementById('city')
 const apiKey = '1a48bcdb0ce62b547d026e931fb18bcd';
 const currentContainer = document.getElementById('weather-container')
 const forecast = document.getElementById('forcast')
-
+let cities = JSON.parse(localStorage.getItem("cities"));
+const citiesContainer = document.getElementById("buttons");
 
 function handleUserInput(event) {
     event.preventDefault()
@@ -50,19 +51,17 @@ function saveCity() {
             temp: Math.round(data[i].temp),
             wind: data[i].wind,
             humidity: data[i].humidity,
-            icon: data[i].icon,
-            weatherInfo: data[i].weatherInfo,
         };
         citiesSave.push(City);
     }
     cities = citiesSave;
     console.log(cities)
-    localStorage.setItem("cities", JSON.stringify(citiesArray));
+    localStorage.setItem("cities", JSON.stringify(citiesSave));
 }
 
 function createCityButton(city) {
     const cityButton = document.createElement("button");
-    cityButton.classList.add("btn", "btn-light", "mt-1", "col-12");
+    cityButton.classList.add("btn", "btn-light");
     cityButton.setAttribute("data-city", city);
     cityButton.textContent = `${city}`;
   
@@ -137,14 +136,12 @@ function forecastCard(data) {
         humiF.textContent = 'Humidity: '+ humi;
         let windySpeedF = document.createElement('p');
         windySpeedF.textContent = 'Wind Speed: ' + windySpeed;
-        // let imageF= document.createElement('img');
 
 
         dateF.className = 'date';
         termpF.className = 'termp';
         humiF.className = 'humi';
         windySpeedF.className = 'wondySpeed';
-        // imageF.className= 'imageForcast'
 
 
         dateF.textContent = date;

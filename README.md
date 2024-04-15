@@ -22,24 +22,31 @@ This page also supports the dark mode feature.
 
 ## Features 
 
--Search Functionality: Users can search for weather information by entering the name of a city or country.
--Current Weather Display: The app displays the current temperature and weather description for the searched location.
+- Search Functionality: Users can search for weather information by entering the name of a city or country.
+
+- Current Weather Display: The app displays the current temperature and weather description for the searched location.
+
 -Forecast Display: Users can view the weather forecast for the upcoming days.
--City Button: Each time a new city is searched, a button with the city name is created for easy access to the weather information.
--Local Storage: Searched cities are stored in the browser's local storage, allowing users to quickly access weather information for previously searched locations.
+
+- City Button: Each time a new city is searched, a button with the city name is created for easy access to the weather information.
+
+- Local Storage: Searched cities are stored in the browser's local storage, allowing users to quickly access weather information for previously searched locations.
 
 ## Instalation
 
 ``bash
--git clone https://github.com/ANDRESGOM77/The_Weather_App
--git pull
+- git clone https://github.com/ANDRESGOM77/The_Weather_App
+- git pull
 
 ## Technologies Usage
 
--HTML: Used for structuring the web page layout.
--CSS: Used for styling and formatting the appearance of the app.
--JavaScript: Used for implementing functionality such as fetching data from the API, handling user interactions, and manipulating the DOM.
--OpenWeatherMap API: Used to retrieve weather data for cities.
+- HTML: Used for structuring the web page layout.
+
+- CSS: Used for styling and formatting the appearance of the app.
+
+- JavaScript: Used for implementing functionality such as fetching data from the API, handling user interactions, and manipulating the DOM.
+
+- OpenWeatherMap API: Used to retrieve weather data for cities.
 
 ## Example API Requests
 
@@ -49,12 +56,13 @@ This page also supports the dark mode feature.
 
 ## Credits
 
--OpenWeatherMap API: OpenWeatherMap
--Icons: FontAwesome
+- OpenWeatherMap API: OpenWeatherMap
+
+- Icons: FontAwesome
 
 ## App Display
 
-- link:
+- link: https://andresgom77.github.io/The_Weather_App/
 
 
 ## Contributing
