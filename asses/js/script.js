@@ -3,8 +3,6 @@ const cityInput = document.getElementById('city')
 const apiKey = '1a48bcdb0ce62b547d026e931fb18bcd';
 const currentContainer = document.getElementById('weather-container')
 const forecast = document.getElementById('forcast')
-const cities = [];
-
 
 
 function handleUserInput(event) {
@@ -22,6 +20,7 @@ function runWeather(city) {
         })
         .then(function (data) {
             modifingWeatherCard(data);
+            saveCity(data)
         })
 }
 
@@ -33,8 +32,43 @@ function runForecast(city) {
         .then(function (data) {
             console.log(data);
             forecastCard(data)
+            saveCity(data)
         })
 }
+function saveCity() {
+    let citiesSave;
+    if (!cities) {
+        citiesSave = []
+    }
+    else {
+        citiesSave = cities.slice();
+    }
+    for (let i = 0; i < data.length; i++) {
+        let City = {
+            city: data[0].city,
+            date: dayjs(data[i].date),
+            temp: Math.round(data[i].temp),
+            wind: data[i].wind,
+            humidity: data[i].humidity,
+            icon: data[i].icon,
+            weatherInfo: data[i].weatherInfo,
+        };
+        citiesSave.push(City);
+    }
+    cities = citiesSave;
+    console.log(cities)
+    localStorage.setItem("cities", JSON.stringify(citiesArray));
+}
+
+function createCityButton(city) {
+    const cityButton = document.createElement("button");
+    cityButton.classList.add("btn", "btn-light", "mt-1", "col-12");
+    cityButton.setAttribute("data-city", city);
+    cityButton.textContent = `${city}`;
+  
+    citiesContainer.appendChild(cityButton);
+  }
+
 
 function modifingWeatherCard(data) {
     console.log(data);
@@ -91,42 +125,18 @@ function forecastCard(data) {
         const windySpeed = forcastList.wind.speed;
         const image = document.getElementById('forcast-img')
 
-        // if (forcastList.weather[0].main == "Clouds") {
-        //     image.src = "asses/images/clouds.png"
-        // }
-        // else if (forcastList.weather[0].main == "Clear") {
-        //     image.src = "asses/images/clear.png"
-        // }
-        // else if (forcastList.weather[0].main == "Drizzle") {
-        //     image.src = "asses/images/drizzle.png"
-        // }
-        // else if (forcastList.weather[0].main == "Humidity") {
-        //     image.src = "asses/images/humidity.png"
-        // }
-        // else if (forcastList.weather[0].main == "Mist") {
-        //     image.src = "asses/images/mist.png"
-        // }
-        // else if (forcastList.weather[0].main == "Rain") {
-        //     image.src = "asses/images/rain.png"
-        // }
-        // else if (forcastList.weather[0].main == "Snow") {
-        //     image.src = "asses/images/snow.png"
-        // }
-        // else if (forcastList.weather[0].main == "Wind") {
-        //     image.src = "asses/images/wind.png"
-        // }
 
         let card = document.createElement('div');
         card.className = 'card';
 
         let dateF = document.createElement('p');
-        dateF.textContent = date;
+        dateF.textContent = 'Date: ' + date;
         let termpF = document.createElement('p');
-        termpF.textContent = termp;
+        termpF.textContent = 'Temperture: ' + '' + termp;
         let humiF = document.createElement('p');
-        humiF.textContent = humi;
+        humiF.textContent = 'Humidity: '+ humi;
         let windySpeedF = document.createElement('p');
-        windySpeedF.textContent = windySpeed;
+        windySpeedF.textContent = 'Wind Speed: ' + windySpeed;
         // let imageF= document.createElement('img');
 
 
@@ -143,21 +153,4 @@ function forecastCard(data) {
     }
 }
 
-window.onload = () => {
-    const form = document.getElementById('city-search')
-    form.onsubmit = (event) => {
-        event.preventDefault();
-        const city = getElementById('city')
-        const cityText = city.value;
-        const cityList = document.getElementById('places')
-        city.value = '';
-        cities.push(cityText);
-        cityList.innerHTML = '';
-        for (let i = 0; i < cities.length; i++) {
-            cityList.innerHTML += '<li>' + cities[i] + '</li>';
-        }
-    }
-
-}
-
-cityForm.addEventListener('submit', handleUserInput)
+  cityForm.addEventListener('submit', handleUserInput)
